@@ -8,21 +8,12 @@
 
 namespace transperth {
 
-    class TrainSystem {
-    public:
-        TrainSystem();
-
-        void addStation(const TrainStation& ts);
-        void connectStation(int parent, int child, TrainStation::ConnectionType type);
-        const TrainStation& getStation(int id) const;
-
-        void addLine(const TrainLine& line);
-        const TrainLine& getLine   (const std::string& name) const;
-    private:
+    typedef struct {
         std::vector<TrainStation> stations;
         std::vector<TrainLine> lines;
-    };
+    } TrainSystem;
 
+    void TrainSystem_connectStation(TrainSystem& ts, int parent, int child, int weight, TrainStation::ConnectionType type);
 }
 
 #endif

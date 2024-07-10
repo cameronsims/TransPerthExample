@@ -22,11 +22,13 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Trainstation.cpp" />
     <ClCompile Include="src\TrainSystem.cpp" />
+    <ClCompile Include="src\TrainSystemFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\TrainLine.h" />
     <ClInclude Include="src\Trainstation.h" />
     <ClInclude Include="src\TrainSystem.h" />
+    <ClInclude Include="src\TrainSystemFile.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

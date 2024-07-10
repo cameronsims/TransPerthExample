@@ -1,0 +1,492 @@
+<Trainsystem>
+    <Stations>        <Station id="0" name="Perth" bus="1" special="0" airport="0">
+            <StationLink type="1" id="59" weight="1"/>
+            <StationLink type="1" id="2" weight="2"/>
+        </Station>
+        <Station id="1" name="Perth Underground" bus="0" special="0" airport="0">
+            <StationLink type="1" id="37" weight="1"/>
+            <StationLink type="1" id="48" weight="2"/>
+        </Station>
+        <Station id="2" name="McIver" bus="0" special="0" airport="0">
+            <StationLink type="1" id="0" weight="2"/>
+            <StationLink type="1" id="3" weight="1"/>
+        </Station>
+        <Station id="3" name="Claisebrook" bus="0" special="0" airport="0">
+            <StationLink type="1" id="2" weight="1"/>
+            <StationLink type="1" id="4" weight="2"/>
+            <StationLink type="1" id="19" weight="1"/>
+        </Station>
+        <Station id="4" name="East Perth" bus="0" special="0" airport="0">
+            <StationLink type="1" id="3" weight="2"/>
+            <StationLink type="1" id="5" weight="2"/>
+        </Station>
+        <Station id="5" name="Mt Lawley" bus="0" special="0" airport="0">
+            <StationLink type="1" id="4" weight="2"/>
+            <StationLink type="1" id="6" weight="2"/>
+        </Station>
+        <Station id="6" name="Maylands" bus="0" special="0" airport="0">
+            <StationLink type="1" id="5" weight="2"/>
+            <StationLink type="1" id="7" weight="2"/>
+        </Station>
+        <Station id="7" name="Meltham" bus="0" special="0" airport="0">
+            <StationLink type="1" id="6" weight="2"/>
+            <StationLink type="1" id="8" weight="2"/>
+        </Station>
+        <Station id="8" name="Bayswater" bus="1" special="0" airport="0">
+            <StationLink type="1" id="7" weight="2"/>
+            <StationLink type="1" id="16" weight="4"/>
+            <StationLink type="1" id="77" weight="2"/>
+            <StationLink type="1" id="9" weight="2"/>
+        </Station>
+        <Station id="77" name="Morley" bus="0" special="0" airport="0">
+            <StationLink type="1" id="8" weight="2"/>
+            <StationLink type="1" id="78" weight="3"/>
+        </Station>
+        <Station id="78" name="Noranda" bus="0" special="0" airport="0">
+            <StationLink type="1" id="77" weight="3"/>
+            <StationLink type="1" id="79" weight="1"/>
+        </Station>
+        <Station id="79" name="Malaga" bus="0" special="0" airport="0">
+            <StationLink type="1" id="78" weight="1"/>
+            <StationLink type="1" id="80" weight="1"/>
+        </Station>
+        <Station id="80" name="Whiteman Park" bus="0" special="0" airport="0">
+            <StationLink type="1" id="79" weight="1"/>
+            <StationLink type="1" id="81" weight="4"/>
+        </Station>
+        <Station id="81" name="Ellenbrook" bus="0" special="0" airport="0">
+            <StationLink type="1" id="80" weight="4"/>
+        </Station>
+        <Station id="9" name="Ashfield" bus="0" special="0" airport="0">
+            <StationLink type="1" id="8" weight="2"/>
+            <StationLink type="1" id="10" weight="3"/>
+        </Station>
+        <Station id="10" name="Bassendean" bus="1" special="0" airport="0">
+            <StationLink type="1" id="9" weight="3"/>
+            <StationLink type="1" id="11" weight="2"/>
+        </Station>
+        <Station id="11" name="Success Hill" bus="0" special="0" airport="0">
+            <StationLink type="1" id="10" weight="2"/>
+            <StationLink type="1" id="12" weight="2"/>
+        </Station>
+        <Station id="12" name="Guilform" bus="0" special="0" airport="0">
+            <StationLink type="1" id="11" weight="2"/>
+            <StationLink type="1" id="13" weight="2"/>
+        </Station>
+        <Station id="13" name="East Guilford" bus="0" special="0" airport="0">
+            <StationLink type="1" id="12" weight="2"/>
+            <StationLink type="1" id="14" weight="1"/>
+        </Station>
+        <Station id="14" name="Woodbridge" bus="0" special="0" airport="0">
+            <StationLink type="1" id="13" weight="1"/>
+            <StationLink type="1" id="15" weight="2"/>
+        </Station>
+        <Station id="15" name="Midland" bus="1" special="0" airport="0">
+            <StationLink type="1" id="14" weight="2"/>
+        </Station>
+        <Station id="16" name="Redcliffe" bus="1" special="0" airport="1" terminals="T3 T4">
+            <StationLink type="1" id="8" weight="4"/>
+            <StationLink type="1" id="17" weight="3"/>
+        </Station>
+        <Station id="17" name="Airport Central" bus="0" special="0" airport="1" terminals="T1 T2">
+            <StationLink type="1" id="16" weight="3"/>
+            <StationLink type="1" id="18" weight="4"/>
+        </Station>
+        <Station id="18" name="High Wycombe" bus="1" special="0" airport="0">
+            <StationLink type="1" id="17" weight="4"/>
+        </Station>
+        <Station id="19" name="Perth Stadium" bus="0" special="1" airport="0">
+            <StationLink type="1" id="3" weight="1"/>
+            <StationLink type="1" id="20" weight="1"/>
+        </Station>
+        <Station id="20" name="Burswood" bus="0" special="0" airport="0">
+            <StationLink type="1" id="19" weight="1"/>
+            <StationLink type="1" id="21" weight="1"/>
+        </Station>
+        <Station id="21" name="Victoria Park" bus="0" special="0" airport="0">
+            <StationLink type="1" id="20" weight="1"/>
+            <StationLink type="1" id="22" weight="2"/>
+        </Station>
+        <Station id="22" name="Carlisle" bus="0" special="0" airport="0">
+            <StationLink type="1" id="21" weight="2"/>
+            <StationLink type="1" id="23" weight="2"/>
+        </Station>
+        <Station id="23" name="Oasts Street" bus="1" special="0" airport="0">
+            <StationLink type="1" id="22" weight="2"/>
+            <StationLink type="1" id="24" weight="1"/>
+        </Station>
+        <Station id="24" name="Welshpool" bus="0" special="0" airport="0">
+            <StationLink type="1" id="23" weight="1"/>
+            <StationLink type="1" id="25" weight="2"/>
+        </Station>
+        <Station id="25" name="Queens park" bus="0" special="0" airport="0">
+            <StationLink type="1" id="24" weight="2"/>
+            <StationLink type="1" id="26" weight="2"/>
+        </Station>
+        <Station id="26" name="Cannington" bus="1" special="0" airport="0">
+            <StationLink type="1" id="25" weight="2"/>
+            <StationLink type="1" id="28" weight="2"/>
+            <StationLink type="1" id="27" weight="2"/>
+        </Station>
+        <Station id="27" name="Thornlie" bus="1" special="0" airport="0">
+            <StationLink type="1" id="26" weight="2"/>
+            <StationLink type="1" id="75" weight="3"/>
+        </Station>
+        <Station id="75" name="Nicholson Road" bus="0" special="0" airport="0">
+            <StationLink type="1" id="27" weight="3"/>
+            <StationLink type="1" id="76" weight="5"/>
+        </Station>
+        <Station id="76" name="Ranford Road" bus="0" special="0" airport="0">
+            <StationLink type="1" id="75" weight="5"/>
+            <StationLink type="1" id="41" weight="5"/>
+        </Station>
+        <Station id="28" name="Beckenham" bus="0" special="0" airport="0">
+            <StationLink type="1" id="26" weight="2"/>
+            <StationLink type="1" id="29" weight="2"/>
+        </Station>
+        <Station id="29" name="Kenwick" bus="0" special="0" airport="0">
+            <StationLink type="1" id="28" weight="2"/>
+            <StationLink type="1" id="30" weight="3"/>
+        </Station>
+        <Station id="30" name="Maddington" bus="1" special="0" airport="0">
+            <StationLink type="1" id="29" weight="3"/>
+            <StationLink type="1" id="31" weight="3"/>
+        </Station>
+        <Station id="31" name="Gosnells" bus="1" special="0" airport="0">
+            <StationLink type="1" id="30" weight="3"/>
+            <StationLink type="1" id="32" weight="2"/>
+        </Station>
+        <Station id="32" name="Seaforth" bus="0" special="0" airport="0">
+            <StationLink type="1" id="31" weight="2"/>
+            <StationLink type="1" id="33" weight="3"/>
+        </Station>
+        <Station id="33" name="Kelmscott" bus="1" special="0" airport="0">
+            <StationLink type="1" id="32" weight="3"/>
+            <StationLink type="1" id="34" weight="3"/>
+        </Station>
+        <Station id="34" name="Challis" bus="0" special="0" airport="0">
+            <StationLink type="1" id="33" weight="3"/>
+            <StationLink type="1" id="35" weight="2"/>
+        </Station>
+        <Station id="35" name="Sherwood" bus="0" special="0" airport="0">
+            <StationLink type="1" id="34" weight="2"/>
+            <StationLink type="1" id="36" weight="5"/>
+        </Station>
+        <Station id="36" name="Armadale" bus="1" special="0" airport="0">
+            <StationLink type="1" id="35" weight="5"/>
+            <StationLink type="1" id="82" weight="2"/>
+        </Station>
+        <Station id="82" name="Byford" bus="0" special="0" airport="0">
+            <StationLink type="1" id="36" weight="2"/>
+        </Station>
+        <Station id="37" name="Elizabeth Quay" bus="1" special="0" airport="0">
+            <StationLink type="1" id="1" weight="1"/>
+            <StationLink type="1" id="38" weight="6"/>
+        </Station>
+        <Station id="38" name="Canning Bridge" bus="1" special="0" airport="0">
+            <StationLink type="1" id="37" weight="6"/>
+            <StationLink type="1" id="39" weight="4"/>
+        </Station>
+        <Station id="39" name="Bull Creek" bus="1" special="0" airport="0">
+            <StationLink type="1" id="38" weight="4"/>
+            <StationLink type="1" id="40" weight="3"/>
+        </Station>
+        <Station id="40" name="Murdoch" bus="1" special="0" airport="0">
+            <StationLink type="1" id="39" weight="3"/>
+            <StationLink type="1" id="41" weight="3"/>
+        </Station>
+        <Station id="41" name="Cockburn Central" bus="1" special="0" airport="0">
+            <StationLink type="1" id="40" weight="3"/>
+            <StationLink type="1" id="42" weight="3"/>
+            <StationLink type="1" id="76" weight="5"/>
+        </Station>
+        <Station id="42" name="Aubin Grove" bus="1" special="0" airport="0">
+            <StationLink type="1" id="41" weight="3"/>
+            <StationLink type="1" id="43" weight="5"/>
+        </Station>
+        <Station id="43" name="Kwinana" bus="1" special="0" airport="0">
+            <StationLink type="1" id="42" weight="5"/>
+            <StationLink type="1" id="44" weight="4"/>
+        </Station>
+        <Station id="44" name="Wellard" bus="1" special="0" airport="0">
+            <StationLink type="1" id="43" weight="4"/>
+            <StationLink type="1" id="45" weight="4"/>
+        </Station>
+        <Station id="45" name="Rockingham" bus="1" special="0" airport="0">
+            <StationLink type="1" id="44" weight="4"/>
+            <StationLink type="1" id="46" weight="4"/>
+        </Station>
+        <Station id="46" name="Warnbro" bus="1" special="0" airport="0">
+            <StationLink type="1" id="45" weight="4"/>
+            <StationLink type="1" id="47" weight="4"/>
+        </Station>
+        <Station id="47" name="Mandurah" bus="1" special="0" airport="0">
+            <StationLink type="1" id="46" weight="4"/>
+        </Station>
+        <Station id="48" name="Leederville" bus="1" special="0" airport="0">
+            <StationLink type="1" id="1" weight="2"/>
+            <StationLink type="1" id="49" weight="3"/>
+        </Station>
+        <Station id="49" name="Glendalough" bus="1" special="0" airport="0">
+            <StationLink type="1" id="48" weight="3"/>
+            <StationLink type="1" id="50" weight="2"/>
+        </Station>
+        <Station id="50" name="Stirling" bus="1" special="0" airport="0">
+            <StationLink type="1" id="49" weight="2"/>
+            <StationLink type="1" id="51" weight="3"/>
+        </Station>
+        <Station id="51" name="Warwick" bus="1" special="0" airport="0">
+            <StationLink type="1" id="50" weight="3"/>
+            <StationLink type="1" id="52" weight="5"/>
+        </Station>
+        <Station id="52" name="Greenwood" bus="0" special="0" airport="0">
+            <StationLink type="1" id="51" weight="5"/>
+            <StationLink type="1" id="53" weight="3"/>
+        </Station>
+        <Station id="53" name="Whitfords" bus="1" special="0" airport="0">
+            <StationLink type="1" id="52" weight="3"/>
+            <StationLink type="1" id="54" weight="3"/>
+        </Station>
+        <Station id="54" name="Edgewater" bus="0" special="0" airport="0">
+            <StationLink type="1" id="53" weight="3"/>
+            <StationLink type="1" id="55" weight="3"/>
+        </Station>
+        <Station id="55" name="Joondalup" bus="1" special="0" airport="0">
+            <StationLink type="1" id="54" weight="3"/>
+            <StationLink type="1" id="56" weight="3"/>
+        </Station>
+        <Station id="56" name="Currambine" bus="0" special="0" airport="0">
+            <StationLink type="1" id="55" weight="3"/>
+            <StationLink type="1" id="57" weight="3"/>
+        </Station>
+        <Station id="57" name="Clarkson" bus="1" special="0" airport="0">
+            <StationLink type="1" id="56" weight="3"/>
+            <StationLink type="1" id="58" weight="3"/>
+        </Station>
+        <Station id="58" name="Butler" bus="1" special="0" airport="0">
+            <StationLink type="1" id="57" weight="3"/>
+            <StationLink type="1" id="83" weight="3"/>
+        </Station>
+        <Station id="83" name="Alkimos" bus="0" special="0" airport="0">
+            <StationLink type="1" id="58" weight="3"/>
+            <StationLink type="1" id="84" weight="3"/>
+        </Station>
+        <Station id="84" name="Eglinton" bus="0" special="0" airport="0">
+            <StationLink type="1" id="83" weight="3"/>
+            <StationLink type="1" id="85" weight="2"/>
+        </Station>
+        <Station id="85" name="Yanchep" bus="0" special="0" airport="0">
+            <StationLink type="1" id="84" weight="2"/>
+        </Station>
+        <Station id="59" name="City West" bus="0" special="0" airport="0">
+            <StationLink type="1" id="60" weight="4"/>
+            <StationLink type="1" id="0" weight="1"/>
+        </Station>
+        <Station id="60" name="West Leederville" bus="0" special="0" airport="0">
+            <StationLink type="1" id="61" weight="2"/>
+            <StationLink type="1" id="59" weight="4"/>
+        </Station>
+        <Station id="61" name="Subiaco" bus="1" special="0" airport="0">
+            <StationLink type="1" id="62" weight="2"/>
+            <StationLink type="1" id="60" weight="2"/>
+        </Station>
+        <Station id="62" name="Daglish" bus="0" special="0" airport="0">
+            <StationLink type="1" id="63" weight="2"/>
+            <StationLink type="1" id="61" weight="2"/>
+        </Station>
+        <Station id="63" name="Shenton Park" bus="1" special="0" airport="0">
+            <StationLink type="1" id="64" weight="2"/>
+            <StationLink type="1" id="62" weight="2"/>
+        </Station>
+        <Station id="64" name="Karrakatta" bus="0" special="0" airport="0">
+            <StationLink type="1" id="65" weight="2"/>
+            <StationLink type="1" id="63" weight="2"/>
+        </Station>
+        <Station id="65" name="Loch Street" bus="0" special="0" airport="0">
+            <StationLink type="1" id="66" weight="2"/>
+            <StationLink type="1" id="64" weight="2"/>
+        </Station>
+        <Station id="66" name="Showgrounds" bus="0" special="1" airport="0">
+            <StationLink type="1" id="67" weight="1"/>
+            <StationLink type="1" id="65" weight="2"/>
+        </Station>
+        <Station id="67" name="Claremont" bus="1" special="0" airport="0">
+            <StationLink type="1" id="66" weight="1"/>
+            <StationLink type="1" id="68" weight="2"/>
+        </Station>
+        <Station id="68" name="Swanbourne" bus="0" special="0" airport="0">
+            <StationLink type="1" id="67" weight="2"/>
+            <StationLink type="1" id="69" weight="2"/>
+        </Station>
+        <Station id="69" name="Grant Street" bus="0" special="0" airport="0">
+            <StationLink type="1" id="68" weight="2"/>
+            <StationLink type="1" id="70" weight="2"/>
+        </Station>
+        <Station id="70" name="Cottesloe" bus="1" special="0" airport="0">
+            <StationLink type="1" id="69" weight="2"/>
+            <StationLink type="1" id="71" weight="1"/>
+        </Station>
+        <Station id="71" name="Mosman Park" bus="0" special="0" airport="0">
+            <StationLink type="1" id="70" weight="1"/>
+            <StationLink type="1" id="72" weight="2"/>
+        </Station>
+        <Station id="72" name="Victoria Street" bus="0" special="0" airport="0">
+            <StationLink type="1" id="71" weight="2"/>
+            <StationLink type="1" id="73" weight="1"/>
+        </Station>
+        <Station id="73" name="North Fremantle" bus="0" special="0" airport="0">
+            <StationLink type="1" id="72" weight="1"/>
+            <StationLink type="1" id="74" weight="3"/>
+        </Station>
+        <Station id="74" name="Fremantle" bus="1" special="0" airport="0">
+            <StationLink type="1" id="73" weight="3"/>
+        </Station>
+    </Stations>
+    <Trainlines>
+        <Trainline name="Airport">
+            <Trainstop id="67"/>
+            <Trainstop id="66"/>
+            <Trainstop id="65"/>
+            <Trainstop id="64"/>
+            <Trainstop id="63"/>
+            <Trainstop id="62"/>
+            <Trainstop id="61"/>
+            <Trainstop id="60"/>
+            <Trainstop id="59"/>
+            <Trainstop id="0"/>
+            <Trainstop id="2"/>
+            <Trainstop id="3"/>
+            <Trainstop id="4"/>
+            <Trainstop id="5"/>
+            <Trainstop id="6"/>
+            <Trainstop id="7"/>
+            <Trainstop id="8"/>
+            <Trainstop id="16"/>
+            <Trainstop id="17"/>
+            <Trainstop id="18"/>
+        </Trainline>
+        <Trainline name="Armadale">
+            <Trainstop id="0"/>
+            <Trainstop id="2"/>
+            <Trainstop id="3"/>
+            <Trainstop id="19"/>
+            <Trainstop id="20"/>
+            <Trainstop id="21"/>
+            <Trainstop id="22"/>
+            <Trainstop id="23"/>
+            <Trainstop id="24"/>
+            <Trainstop id="25"/>
+            <Trainstop id="26"/>
+            <Trainstop id="28"/>
+            <Trainstop id="29"/>
+            <Trainstop id="30"/>
+            <Trainstop id="31"/>
+            <Trainstop id="32"/>
+            <Trainstop id="33"/>
+            <Trainstop id="34"/>
+            <Trainstop id="35"/>
+            <Trainstop id="36"/>
+            <Trainstop id="82"/>
+        </Trainline>
+        <Trainline name="Butler">
+            <Trainstop id="37"/>
+            <Trainstop id="1"/>
+            <Trainstop id="48"/>
+            <Trainstop id="49"/>
+            <Trainstop id="50"/>
+            <Trainstop id="51"/>
+            <Trainstop id="52"/>
+            <Trainstop id="53"/>
+            <Trainstop id="54"/>
+            <Trainstop id="55"/>
+            <Trainstop id="56"/>
+            <Trainstop id="57"/>
+            <Trainstop id="58"/>
+            <Trainstop id="83"/>
+            <Trainstop id="84"/>
+            <Trainstop id="85"/>
+        </Trainline>
+        <Trainline name="Ellenbrook">
+            <Trainstop id="0"/>
+            <Trainstop id="2"/>
+            <Trainstop id="3"/>
+            <Trainstop id="4"/>
+            <Trainstop id="5"/>
+            <Trainstop id="6"/>
+            <Trainstop id="7"/>
+            <Trainstop id="8"/>
+            <Trainstop id="77"/>
+            <Trainstop id="78"/>
+            <Trainstop id="79"/>
+            <Trainstop id="80"/>
+            <Trainstop id="81"/>
+        </Trainline>
+        <Trainline name="Fremantle">
+            <Trainstop id="0"/>
+            <Trainstop id="59"/>
+            <Trainstop id="60"/>
+            <Trainstop id="61"/>
+            <Trainstop id="62"/>
+            <Trainstop id="63"/>
+            <Trainstop id="64"/>
+            <Trainstop id="65"/>
+            <Trainstop id="66"/>
+            <Trainstop id="67"/>
+            <Trainstop id="68"/>
+            <Trainstop id="69"/>
+            <Trainstop id="70"/>
+            <Trainstop id="71"/>
+            <Trainstop id="72"/>
+            <Trainstop id="73"/>
+            <Trainstop id="74"/>
+        </Trainline>
+        <Trainline name="Mandurah">
+            <Trainstop id="1"/>
+            <Trainstop id="37"/>
+            <Trainstop id="38"/>
+            <Trainstop id="39"/>
+            <Trainstop id="40"/>
+            <Trainstop id="41"/>
+            <Trainstop id="42"/>
+            <Trainstop id="43"/>
+            <Trainstop id="44"/>
+            <Trainstop id="45"/>
+            <Trainstop id="46"/>
+            <Trainstop id="47"/>
+        </Trainline>
+        <Trainline name="Midland">
+            <Trainstop id="0"/>
+            <Trainstop id="2"/>
+            <Trainstop id="3"/>
+            <Trainstop id="4"/>
+            <Trainstop id="5"/>
+            <Trainstop id="6"/>
+            <Trainstop id="7"/>
+            <Trainstop id="8"/>
+            <Trainstop id="9"/>
+            <Trainstop id="10"/>
+            <Trainstop id="11"/>
+            <Trainstop id="12"/>
+            <Trainstop id="13"/>
+            <Trainstop id="14"/>
+            <Trainstop id="15"/>
+        </Trainline>
+        <Trainline name="Thornlie">
+            <Trainstop id="0"/>
+            <Trainstop id="2"/>
+            <Trainstop id="3"/>
+            <Trainstop id="19"/>
+            <Trainstop id="20"/>
+            <Trainstop id="21"/>
+            <Trainstop id="22"/>
+            <Trainstop id="23"/>
+            <Trainstop id="24"/>
+            <Trainstop id="25"/>
+            <Trainstop id="26"/>
+            <Trainstop id="27"/>
+            <Trainstop id="75"/>
+            <Trainstop id="76"/>
+            <Trainstop id="41"/>
+        </Trainline>
+    </Trainlines>
+</Trainsystem>

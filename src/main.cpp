@@ -2,112 +2,44 @@
 #include "Trainsystem.h"
 #include "TrainLine.h"
 
-#include <filesystem>
 #include <iostream>
 #include <sstream>
 #include <fstream>
 
-void parse_station(transperth::TrainSystem& tsys, const std::string& line) {
-    if (line.size() > 0) {
+#include "TrainSystemFile.h"
 
-        // Check how much commas there are...
-        size_t freq = 0;
-        for (size_t i = 0; i < line.size(); i++) {
-            if (line[i] == ',') {
-                freq++;
-            }
+void set_station_header(std::ostream& os) {
+    os << "<tr><td>ID</td><td>Name</td><td>Bus Station</td><td>Event Station</td><td>Airport Station</td><td>Terminals</td></tr>";
+}
+void add_station(std::ostream& os, const transperth::TrainStation& ts) {
+
+    auto lam = [&](bool b) { 
+        const std::string s = (b ? "True" : "False");
+        os << "<td class=\"" << s << "\">" << s << "</td>";
+    };
+
+    os << "<tr><td>" << ts.ID << "</td><td>" << ts.name << "</td>";
+    lam(ts.hasBusServices);
+    lam(ts.isSpecial);
+    lam(ts.hasAirport);
+    os << "<td>";
+
+    if (ts.hasAirport) {
+        for (size_t j = 0; j < ts.terminals.size(); j++) {
+            os << ts.terminals[j] << ((ts.terminals.size() - 1 != j) ? ", " : "");
         }
-
-        size_t first = -1, second = -1, third = -1, fourth = -1;
-        for (size_t i = 0; i < line.size(); i++) {
-            if (line[i] == ',') {
-                if (first == -1) {
-                    first = i + 1;
-                } else if (second == -1) {
-                    second = i + 1;
-                } else if (third == -1) {
-                    third = i + 1;
-                } else if (fourth == -1) {
-                    fourth = i + 1;
-                }
-            }
-        }
-
-        if (first != -1 && second != -1 && third != -1) {
-            std::string id = line.substr(0, first - 1);
-            std::string name = line.substr(first, second - first - 1);
-            std::string bus = line.substr(second, third - second - 1);
-            std::string special = line.substr(third, fourth - third - 1);
-
-            // Check if there is more commas
-            size_t fourthEnd = line.size();
-            std::vector<size_t> extraCommas;
-            if (freq > 3) {
-                for (size_t i = fourth; i < line.size(); i++) {
-                    if (line[i] == ',' && fourthEnd == line.size()) {
-                        fourthEnd = i;
-                    }
-
-                    if (fourthEnd != line.size()) {
-                        if (line[i] == ',') {
-                            extraCommas.push_back(i);
-                        }
-                    }
-                   
-                }
-            }
-
-            std::string airport = line.substr(fourth, fourthEnd - fourth); 
-
-            transperth::TrainStation tstat;
-
-            if (fourthEnd != line.size() && extraCommas.size() > 0) {
-                const size_t end = line.size();
-                size_t last = extraCommas[0] + 1;
-                    
-                for (size_t i = 1; i < extraCommas.size(); i++) {
-                    std::string s = line.substr(last, extraCommas[i] - last);
-                    last = extraCommas[i] + 1;
-                    tstat.terminals.push_back(s);
-                }
-
-                tstat.terminals.push_back(line.substr(last, line.size() - last));
-            }
-
-            transperth::TrainStation_init(&tstat, std::stod(id), name, std::stod(bus) == 1, std::stod(special) == 1, std::stod(airport) == 1);
-
-            tsys.addStation(tstat);
-        }
-
     }
+    os << "</td></tr>";
 }
 
-void add_file(transperth::TrainSystem& tsys, transperth::TrainLine& line, const std::string& fileName) {
-    std::ifstream fman(fileName);
-    if (!fman.good()) {
-        throw -1;
+std::string fstream_to_string(std::istream& in) {
+    std::string txt;
+    while (!in.eof()) {
+        std::string temp;
+        in >> temp;
+        txt += (temp + " ");
     }
-
-    while (!fman.eof()) {
-        std::string cell;
-        std::getline(fman, cell, ',');
-        line.stops.push_back( std::stod(cell) );
-    }
-
-    // Set the name of the Trainline to the last station
-    const size_t SIZE = line.stops.size();
-    if (SIZE == 0) {
-        return;
-    }
-
-    const int lastID = line.stops[SIZE - 1];
-    line.name = tsys.getStation(lastID).name;
-
-    for (size_t i = 0; i < line.stops.size() - 1; i++) {
-        const int current = line.stops[i], 
-                  next = line.stops[i + 1];
-        tsys.connectStation(current, next, transperth::TrainStation::ConnectionType::TRAIN);
-    }
+    return txt;
 }
 
 int main() {
@@ -122,62 +54,128 @@ int main() {
     while (!f.eof()) {
         std::string line;
         std::getline(f, line);
-        parse_station(tsys, line);
+        transperth::parse_station(tsys, line);
     }
 
-    std::vector<std::string> lines;
+    transperth::read_trainlines(tsys);
 
-    for (const auto& it : std::filesystem::directory_iterator("./trainlines")) {
-        if (it.exists() && it.is_regular_file()) {
-            transperth::TrainLine line;
 
-            std::string path = it.path().string();
-            add_file(tsys, line, path);
+    // XML
 
-            std::string name;
-            size_t eoDirectory = 0, 
-                   eoFileName = path.size();
-            for (size_t i = 0; i < path.size(); i++) {
-                if (path[i] == '/' || path[i] == '\\') {
-                    eoDirectory = i + 1;
-                }
-                if (path[i] == '.') {
-                    eoFileName = i;
-                }
+    std::ofstream output("./output.xml");
+    output << "<Trainsystem>\n";
+
+    output << "    <Stations>";
+    for (size_t i = 0; i < tsys.stations.size(); i++) {
+        const transperth::TrainStation& station = tsys.stations[i];
+        const std::vector<transperth::TrainStation::Link>& links = station.links;
+        output << "        <Station id=\"" << station.ID
+                             << "\" name=\"" << station.name
+                             << "\" bus=\"" << station.hasBusServices
+                             << "\" special=\"" << station.isSpecial
+                             << "\" airport=\"" << station.hasAirport << "\"";
+           
+        if (station.hasAirport) {
+            output << " terminals=\"";
+            for (size_t j = 0; j < station.terminals.size(); j++) {
+                output << station.terminals[j] << ((j - 1 >= station.terminals.size()) ? " " : "\"");
             }
-            name = path.substr(eoDirectory, eoFileName - eoDirectory);
-            
-            const size_t last = line.stops.size() - 1;
-            const size_t pos = line.stops[last];
-            line.name = name;
-            lines.push_back(line.name);
-
-            tsys.addLine(line);
         }
+
+        output << ">\n";
+
+        for (size_t j = 0; j < links.size(); j++) {
+            const transperth::TrainStation::Link& link = links[j];
+            output << "            <StationLink type=\"" << (int)link.type << "\" id=\"" << link.connection->ID << "\" weight=\"" << link.weight << "\"/>\n";
+        }
+        output << "        </Station>\n";
     }
+    output << "    </Stations>\n";
 
-    
-
-
-
-
-    for (size_t i = 0; i < lines.size(); i++) {
-        const transperth::TrainLine& line = tsys.getLine(lines[i]);
+    output << "    <Trainlines>\n";
+    for (size_t i = 0; i < tsys.lines.size(); i++) {
+        const transperth::TrainLine& line = tsys.lines[i];
         const std::vector<int>& v = line.stops;
 
-        std::cout << "Start of " << lines[i] << "\n";
+        output << "        <Trainline name=\"" << line.name << "\">\n";
         for (size_t i = 0; i < v.size(); i++) {
-            const transperth::TrainStation& t = tsys.getStation(v[i]);
-
-            std::cout << "(" << t.links.size() << ") " << t.name << ": ";
-            for (size_t j = 0; j < t.links.size(); j++) {
-                std::cout << t.links[j].connection->name << (j != (t.links.size() - 1) ? ", " : "");
-            }
-            std::cout << "\n";
+            output << "            <Trainstop id=\"" << v[i] << "\"/>\n";
         }
 
-        std::cout << "End of " << lines[i] << "\n\n";
+        output << "        </Trainline>\n";
     }
+    output << "    </Trainlines>\n";
+    output << "</Trainsystem>\n";
+
+
+
+
+
+
+    // HTML
+
+    std::ofstream index("./html/index.html");
+    std::ofstream stations("./html/stations.html");
+
+
+    std::ifstream head("./html/document-head.html");
+    std::string headTxt = fstream_to_string(head);
+
+    std::ifstream foot("./html/document-foot.html");
+    std::string footTxt = fstream_to_string(foot);
+    
+    index << headTxt;
+    stations << headTxt;
+    
+
+    stations << "<div>TransPerth Stations</div>";
+    stations << "<table>";
+    set_station_header(stations);
+    for (size_t i = 0; i < tsys.stations.size(); i++) {
+        add_station(stations, tsys.stations[i]);
+    }
+    stations << "</table>";
+
+    
+    index << "<a href=\"./stations.html\">Stations</a><p/>";
+    for (size_t i = 0; i < tsys.lines.size(); i++) {
+        const transperth::TrainLine line = tsys.lines[i];
+        const std::vector<int>& stops = line.stops;
+
+        index << "<a href=\"./" << line.name << ".html\">" << line.name << "</a></p>";
+        
+        std::ofstream os("./html/" + line.name + ".html");
+        os << headTxt;
+        os << "<div>TransPerth Stations</div>";
+        os << "<table>";
+        set_station_header(os);
+
+        // Print all Stations
+        
+        for (size_t j = 0; j < stops.size(); j++) {
+            // Look through our original vector
+            size_t location = -1;
+            for (size_t k = 0; k < tsys.stations.size(); k++) {
+                if (stops[j] == tsys.stations[k].ID) {
+                    location = k;
+                    break;
+                }
+            }
+            if (location != -1) {
+                add_station(os, tsys.stations[location]);
+            }
+        }
+
+        os << "</table>";
+        os << footTxt;
+    }
+
+
+
+
+    index << footTxt;
+    stations << footTxt;
+
 
     return 0;
 }
