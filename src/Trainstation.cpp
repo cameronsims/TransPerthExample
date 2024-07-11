@@ -8,14 +8,16 @@ void transperth::TrainStation_init(TrainStation* ts, int id, const std::string& 
     ts->hasAirport = hasAirport;
 }
 
-void transperth::TrainStation_connect(TrainStation* left, TrainStation* right, TrainStation::ConnectionType type) {
+void transperth::TrainStation_connect(TrainStation* left, TrainStation* right, int weight, TrainStation::ConnectionType type) {
     TrainStation::Link llink, rlink;
 
     llink.connection = right;
     llink.type = type;
+    llink.weight = weight;
 
     rlink.connection = left;
     rlink.type = type;
+    rlink.weight = weight;
 
     bool lExists = false;
     const int lID = llink.connection->ID;

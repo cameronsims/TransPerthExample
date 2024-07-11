@@ -19,6 +19,8 @@ namespace transperth {
             TrainStation* connection;
             /// The type of connection
             TrainStation::ConnectionType type;
+            /// The time it takes to get from one to the other (in minutes)
+            int weight;
         } Link;
 
         /// The ID that the other stops refer to this as
@@ -45,7 +47,7 @@ namespace transperth {
     };
 
     void TrainStation_init(TrainStation* ts, int id, const std::string& name = "...", bool hasBus = false, bool isSpecial = false, bool hasAirport = false);
-    void TrainStation_connect(TrainStation* left, TrainStation* right, TrainStation::ConnectionType type);
+    void TrainStation_connect(TrainStation* left, TrainStation* right, int weight, TrainStation::ConnectionType type);
 
 }
 
