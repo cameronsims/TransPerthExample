@@ -19,16 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\html_generation.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Trainstation.cpp" />
     <ClCompile Include="src\TrainSystem.cpp" />
     <ClCompile Include="src\TrainSystemFile.cpp" />
+    <ClCompile Include="src\xml_generation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\html_generation.h" />
     <ClInclude Include="src\TrainLine.h" />
     <ClInclude Include="src\Trainstation.h" />
     <ClInclude Include="src\TrainSystem.h" />
     <ClInclude Include="src\TrainSystemFile.h" />
+    <ClInclude Include="src\xml_generation.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
