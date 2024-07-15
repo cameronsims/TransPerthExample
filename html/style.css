@@ -1,0 +1,59 @@
+
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align:center;
+	font-size: 2rem;
+}
+
+
+div.train-header {
+	padding: 2rem;
+
+	border: solid 0.25rem #000000;
+	background: #00ffff;
+
+	font-weight: bolder;
+}
+
+table {
+	width: 100%;
+}
+
+table tbody tr td.train-cell {
+	margin: 0rem;
+	border: solid 0.25rem #000000;
+	padding: 1rem;
+}
+
+
+table tbody tr {
+	margin: 0rem;
+	padding: 0rem;
+}
+
+table tbody tr.train-cell-header {
+	width: 100%;
+	padding: 0rem;
+}
+
+table tbody tr.train-cell-header td.train-cell-header {
+	font-weight: bolder;
+	background: #808080;
+}
+
+table tbody tr td.train-cell.train-cell-id {
+	font-weight: bolder;
+	background: #0093f0;
+}
+
+table tbody tr td.train-cell.train-cell-name {
+	background: #ffff00;
+}
+
+table tbody tr td.train-cell.True {
+	background: #77ff77;
+}
+
+table tbody tr td.train-cell.False {
+	background: #ff7777;
+}

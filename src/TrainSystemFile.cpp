@@ -87,16 +87,17 @@ void transperth::add_file(transperth::TrainSystem& tsys, transperth::TrainLine& 
     std::vector<int> weights;
 
     while (!fman.eof()) {
-        std::string cell;
-        std::getline(fman, cell, ',');
-
-        std::stringstream ss(cell);
-
         int id = -1, weight = -1;
-        ss >> id;
-        ss >> weight;
+        std::string cell1, cell2;
+        std::getline(fman, cell1, ',');
+        std::getline(fman, cell2, '\n');
 
+        std::stringstream ss(cell1);
+        ss >> id;
         line.stops.push_back(id);
+        
+        ss = std::stringstream(cell2);
+        ss >> weight;
         weights.push_back(weight);
     }
 
@@ -105,9 +106,10 @@ void transperth::add_file(transperth::TrainSystem& tsys, transperth::TrainLine& 
     if (SIZE == 0) {
         return;
     }
-
-    const int lastID = line.stops[SIZE - 1];
-    line.name = tsys.stations[lastID].name;
+    
+    const size_t endOfDirectory = fileName.find_last_of('\\');
+    const size_t endOfFileName  = fileName.find_last_of('.');
+    std::string name = fileName.substr(endOfDirectory, endOfFileName - endOfDirectory);
 
     for (size_t i = 0; i < line.stops.size() - 1; i++) {
         const int current = line.stops[i],

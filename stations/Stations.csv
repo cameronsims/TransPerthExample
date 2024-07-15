@@ -1,46 +1,18 @@
-0,Perth,1,0,0
-1,Perth Underground,0,0,0
+99007,Perth,1,0,0
+99013,McIver,0,0,0
 
-2,McIver,0,0,0
-3,Claisebrook,0,0,0
-
-4,East Perth,0,0,0
-5,Mt Lawley,0,0,0
-6,Maylands,0,0,0
-7,Meltham,0,0,0
-8,Bayswater,1,0,0
-
-77,Morley,0,0,0
-78,Noranda,0,0,0
-79,Malaga,0,0,0
-80,Whiteman Park,0,0,0
-81,Ellenbrook,0,0,0
-
-9,Ashfield,0,0,0
-10,Bassendean,1,0,0
-11,Success Hill,0,0,0
-12,Guilform,0,0,0
-13,East Guilford,0,0,0
-14,Woodbridge,0,0,0
-15,Midland,1,0,0
-
-16,Redcliffe,1,0,1,T3,T4
-17,Airport Central,0,0,1,T1,T2
-18,High Wycombe,1,0,0
-
-19,Perth Stadium,0,1,0
-20,Burswood,0,0,0
-21,Victoria Park,0,0,0
-22,Carlisle,0,0,0
-23,Oasts Street,1,0,0
-24,Welshpool,0,0,0
-25,Queens park,0,0,0
-26,Cannington,1,0,0
-
-27,Thornlie,1,0,0
+99023,Claisebrook,0,0,0
+99032,Perth Stadium,0,1,0
+99041,Burswood,0,0,0
+99051,Victoria Park,0,0,0
+99061,Carlisle,0,0,0
+99071,Oasts Street,1,0,0
+99081,Welshpool,0,0,0
+99091,Queens park,0,0,0
+99101,Cannington,1,0,0
+99000,Thornlie,1,0,0
 75,Nicholson Road,0,0,0
 76,Ranford Road,0,0,0
-
 28,Beckenham,0,0,0
 29,Kenwick,0,0,0
 30,Maddington,1,0,0
@@ -52,48 +24,73 @@
 36,Armadale,1,0,0
 82,Byford,0,0,0
 
-37,Elizabeth Quay,1,0,0
+99202,City West,0,0,0
+99212,West Leederville,0,0,0
+99222,Subiaco,1,0,0
+99232,Daglish,0,0,0
+99242,Shenton Park,1,0,0
+99252,Karrakatta,0,0,0
+99262,Loch Street,0,0,0
+99272,Showgrounds,0,1,0
+99282,Claremont,1,0,0
+99291,Swanbourne,0,0,0
 
-38,Canning Bridge,1,0,0
-39,Bull Creek,1,0,0
-40,Murdoch,1,0,0
-41,Cockburn Central,1,0,0
-42,Aubin Grove,1,0,0
-43,Kwinana,1,0,0
-44,Wellard,1,0,0
-45,Rockingham,1,0,0
-46,Warnbro,1,0,0
-47,Mandurah,1,0,0
+99301,Grant Street,0,0,0
+99311,Cottesloe,1,0,0
+99321,Mosman Park,0,0,0
+99331,Victoria Street,0,0,0
+99341,North Fremantle,0,0,0
+99351,Fremantle,1,0,0
 
-48,Leederville,1,0,0
-49,Glendalough,1,0,0
-50,Stirling,1,0,0
-51,Warwick,1,0,0
-52,Greenwood,0,0,0
-53,Whitfords,1,0,0
-54,Edgewater,0,0,0
-55,Joondalup,1,0,0
-56,Currambine,0,0,0
-57,Clarkson,1,0,0
-58,Butler,1,0,0
-83,Alkimos,0,0,0
-84,Eglinton,0,0,0
-85,Yanchep,0,0,0
+99421,East Perth,0,0,0
+99431,Mt Lawley,0,0,0
+99441,Maylands,0,0,0
+99451,Meltham,0,0,0
+99461,Bayswater,1,0,0
+99471,Ashfield,0,0,0
+99481,Bassendean,1,0,0
+99491,Success Hill,0,0,0
 
-59,City West,0,0,0
-60,West Leederville,0,0,0
-61,Subiaco,1,0,0
-62,Daglish,0,0,0
-63,Shenton Park,1,0,0
-64,Karrakatta,0,0,0
-65,Loch Street,0,0,0
-66,Showgrounds,0,1,0
-67,Claremont,1,0,0
+77,Morley,0,0,0
+78,Noranda,0,0,0
+79,Malaga,0,0,0
+80,Whiteman Park,0,0,0
+81,Ellenbrook,0,0,0
 
-68,Swanbourne,0,0,0
-69,Grant Street,0,0,0
-70,Cottesloe,1,0,0
-71,Mosman Park,0,0,0
-72,Victoria Street,0,0,0
-73,North Fremantle,0,0,0
-74,Fremantle,1,0,0
+99501,Guilform,0,0,0
+99511,East Guilford,0,0,0
+99521,Woodbridge,0,0,0
+99532,Midland,1,0,0
+99541,Redcliffe,1,0,1,T3,T4
+99551,Airport Central,0,0,1,T1,T2
+99561,High Wycombe,1,0,0
+
+99602,Perth Underground,0,0,0
+99612,Elizabeth Quay,1,0,0
+99631,Canning Bridge,1,0,0
+99641,Bull Creek,1,0,0
+99651,Murdoch,1,0,0
+99661,Cockburn Central,1,0,0
+99671,Aubin Grove,1,0,0
+99681,Kwinana,1,0,0
+99691,Wellard,1,0,0
+
+99701,Rockingham,1,0,0
+99721,Warnbro,1,0,0
+99731,Mandurah,1,0,0
+
+99801,Leederville,1,0,0
+99811,Glendalough,1,0,0
+99821,Stirling,1,0,0
+99831,Warwick,1,0,0
+99841,Greenwood,0,0,0
+99851,Whitfords,1,0,0
+99861,Edgewater,0,0,0
+99871,Joondalup,1,0,0
+99881,Currambine,0,0,0
+99891,Clarkson,1,0,0
+
+99901,Butler,1,0,0
+99911,Alkimos,0,0,0
+99921,Eglinton,0,0,0
+99931,Yanchep,0,0,0

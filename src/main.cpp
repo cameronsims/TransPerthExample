@@ -56,10 +56,10 @@ int main() {
     std::ofstream stations("./html/stations.html");
 
 
-    std::ifstream head("./html/document-head.html");
+    std::ifstream head("./html/premade/document-head.html");
     std::string headTxt = fstream_to_string(head);
 
-    std::ifstream foot("./html/document-foot.html");
+    std::ifstream foot("./html/premade/document-foot.html");
     std::string footTxt = fstream_to_string(foot);
     
     transperth::html::create_index_page(tsys, index, headTxt, footTxt);
